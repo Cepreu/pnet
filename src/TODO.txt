@@ -1,0 +1,10 @@
+To remember:
+jsfiddle
+http://css-tricks.com/get-value-of-css-rotation-through-javascript/
+
+
+To fix:
+-- Add sequencian number to object's default name: "Transition_8", etc
+-- move Name to general property
+-- add Rotation to the properties
+-- Weight / rate in transition: just 1 of them is active

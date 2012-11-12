@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/Strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de">
+    <head>
+        <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"/>
+        <title>Simple FreeGroup Draw2D 0.9.26 Demo</title>
+        <link type="text/css" rel="stylesheet" href="../demo.css" />
+
+        <link type="text/css" rel="stylesheet" href="../demo.css" />
+
+        <!-- common, all times required, imports -->    <!--REGEXP_START_REMOVE-->
+        <script type="text/javascript" src="../../String.js"></script>
+        <script type="text/javascript" src="../../wz_jsgraphics.js"></script>
+        <script type="text/javascript" src="../../events.js"></script>
+        <script type="text/javascript" src="../../debug.js"></script>
+        <script type="text/javascript"  src="../../dragdrop.js"></script>
+        <script type="text/javascript"  src="../../UUID.js"></script>
+        <script type="text/javascript"  src="../../PositionConstants.js"></script>
+        <script type="text/javascript"  src="../../Graphics.js"></script>
+        <script type="text/javascript"  src="../../Color.js"></script>
+        <script type="text/javascript"  src="../../ArrayList.js"></script>
+        <script type="text/javascript"  src="../../Point.js"></script>
+        <script type="text/javascript"  src="../../Dimension.js"></script>
+        <script type="text/javascript"  src="../../Border.js"></script>
+        <script type="text/javascript"  src="../../LineBorder.js"></script>
+        <script type="text/javascript"  src="../../Figure.js"></script>
+        <script type="text/javascript"  src="../../Node.js"></script>
+        <script type="text/javascript"  src="../../VectorFigure.js"></script>
+        <script type="text/javascript"  src="../../SVGFigure.js"></script>
+        <script type="text/javascript"  src="../../Label.js"></script>
+        <script type="text/javascript"  src="../../Oval.js"></script>
+        <script type="text/javascript"  src="../../Circle.js"></script>
+        <script type="text/javascript"  src="../../Rectangle.js"></script>
+        <script type="text/javascript"  src="../../ImageFigure.js"></script>
+        <script type="text/javascript"  src="../../Port.js"></script>
+        <script type="text/javascript"  src="../../InputPort.js"></script>
+        <script type="text/javascript"  src="../../OutputPort.js"></script>
+        <script type="text/javascript"  src="../../Line.js"></script>
+        <script type="text/javascript"  src="../../ConnectionRouter.js"></script>
+        <script type="text/javascript"  src="../../NullConnectionRouter.js"></script>
+        <script type="text/javascript"  src="../../ManhattanConnectionRouter.js"></script>
+        <script type="text/javascript"  src="../../BezierConnectionRouter.js"></script>
+        <script type="text/javascript"  src="../../FanConnectionRouter.js"></script>
+        <script type="text/javascript"  src="../../Connection.js"></script>
+        <script type="text/javascript"  src="../../ConnectionAnchor.js"></script>
+        <script type="text/javascript"  src="../../ChopboxConnectionAnchor.js"></script>
+        <script type="text/javascript"  src="../../ConnectionDecorator.js"></script>
+        <script type="text/javascript"  src="../../ArrowConnectionDecorator.js"></script>
+        <script type="text/javascript"  src="../../CompartmentFigure.js"></script>
+        <script type="text/javascript"  src="../../CanvasDocument.js"></script>
+        <script type="text/javascript"  src="../../Annotation.js"></script>
+        <script type="text/javascript"  src="../../ResizeHandle.js"></script>
+        <script type="text/javascript"  src="../../LineStartResizeHandle.js"></script>
+        <script type="text/javascript"  src="../../LineEndResizeHandle.js"></script>
+        <script type="text/javascript"  src="../../Canvas.js"></script>
+        <script type="text/javascript"  src="../../Workflow.js"></script>
+        <script type="text/javascript"  src="../../WindowFigure.js"></script>
+        <script type="text/javascript"  src="../../Button.js"></script>
+        <script type="text/javascript"  src="../../ToggleButton.js"></script>
+        <script type="text/javascript"  src="../../SnapToHelper.js"></script>
+        <script type="text/javascript"  src="../../SnapToGeometry.js"></script>
+        <script type="text/javascript"  src="../../SnapToGeometryEntry.js"></script>
+        <script type="text/javascript"  src="../../SnapToGrid.js"></script>
+        <script type="text/javascript"  src="../../ToggleButton.js"></script>
+        <script type="text/javascript"  src="../../ToolGeneric.js"></script>
+        <script type="text/javascript"  src="../../ToolPalette.js"></script>
+        <script type="text/javascript"  src="../../Dialog.js"></script>
+        <script type="text/javascript"  src="../../InputDialog.js"></script>
+        <script type="text/javascript"  src="../../PropertyDialog.js"></script>
+        <script type="text/javascript"  src="../../AnnotationDialog.js"></script>
+        <script type="text/javascript"  src="../../PropertyWindow.js"></script>
+        <script type="text/javascript"  src="../../ColorDialog.js"></script>
+        <script type="text/javascript"  src="../../LineColorDialog.js"></script>
+        <script type="text/javascript"  src="../../BackgroundColorDialog.js"></script>
+        <script type="text/javascript"  src="../../EditPartFactory.js"></script>
+        <script type="text/javascript"  src="../../AbstractObjectModel.js"></script>
+        <script type="text/javascript"  src="../../PropertyChangeEvent.js"></script>
+        <script type="text/javascript"  src="../../GraphicalViewer.js"></script>
+        <script type="text/javascript"  src="../../GraphicalEditor.js"></script>
+        <script type="text/javascript"  src="../../xmlsax.js"></script>
+        <script type="text/javascript"  src="../../xmlw3cdom.js"></script>
+        <script type="text/javascript"  src="../../XMLSerializer.js"></script>
+        <script type="text/javascript"  src="../../XMLDeserializer.js"></script>
+        <script type="text/javascript"  src="../../EditPolicy.js"></script>
+
+        <!-- undo/redo support (all times required too) -->
+        <script type="text/javascript"  src="../../Command.js"></script>
+        <script type="text/javascript"  src="../../CommandStack.js"></script>
+        <script type="text/javascript"  src="../../CommandStackEvent.js"></script>
+        <script type="text/javascript"  src="../../CommandStackEventListener.js"></script>
+        <script type="text/javascript"  src="../../CommandAdd.js"></script>
+        <script type="text/javascript"  src="../../CommandDelete.js"></script>
+        <script type="text/javascript"  src="../../CommandMove.js"></script>
+        <script type="text/javascript"  src="../../CommandMoveLine.js"></script>
+        <script type="text/javascript"  src="../../CommandMovePort.js"></script>
+        <script type="text/javascript"  src="../../CommandResize.js"></script>
+        <script type="text/javascript"  src="../../CommandSetText.js"></script>
+        <script type="text/javascript"  src="../../CommandSetColor.js"></script>
+        <script type="text/javascript"  src="../../CommandSetBackgroundColor.js"></script>
+        <script type="text/javascript"  src="../../CommandConnect.js"></script>
+        <script type="text/javascript"  src="../../CommandReconnect.js"></script>
+        <script type="text/javascript"  src="../../Menu.js"></script>
+        <script type="text/javascript"  src="../../MenuItem.js"></script>
+        <script type="text/javascript"  src="../../mootools.js"></script>
+        <script type="text/javascript"  src="../../moocanvas.js"></script>
+        <!--REGEXP_END_REMOVE-->
+    </head>
+
+    <body style="margin:0px;padding:0px;">
+        <!-- the main drawing area -->
+        <div id="paintarea" style="width:3000px;height:3000px" >
+
+            <!-- The information help text -->
+            <div class="stickyNote">
+                <b>Draw2D 0.9.26 - A simple diagram drawing demo
+                    <br/>by Andreas Herz (a.herz @ freegroup.de)<br/>
+                </b>
+                <br/>
+                <div style="color:red;font-size:9pt">Focus of this example: Show some core figures from Draw2D.</div>
+                <br/>
+                See more on <a href="http://www.draw2d.org">FreeGroup Draw2D 0.9.26</a>
+            </div>
+        </div>
+        <script type="text/javascript">
+
+            // This demo use the common jacob2D API for object creation.
+            // For XML usage see the FreeGroup Draw2D 0.9.26 Workflow demo.
+            //
+            //
+
+            // Create the interactive paint area
+            // (use "Canvas" for the non interactive paint area)
+            //
+            //  var workflow  = new draw2d.Workflow("paintarea");
+            var workflow  = new draw2d.Canvas("paintarea");
+
+            // Add a Oval with a fill color to the paint area
+            //
+            var node1= new draw2d.Oval();
+            node1.setDimension(100,40);
+            node1.setBackgroundColor(new draw2d.Color(255,0,0));
+            workflow.addFigure(node1,130,180);
+
+            // add a simple line
+            //
+            var line= new draw2d.Line();
+            line.setStartPoint(100,180);
+            line.setEndPoint(130,300);
+            workflow.addFigure(line);
+
+            // add line with line width 5
+            //
+            var line= new draw2d.Line();
+            line.setLineWidth(5);
+            line.setColor(new draw2d.Color(255,0,120));
+            line.setStartPoint(430,450);
+            line.setEndPoint(230,550);
+            workflow.addFigure(line);
+
+
+            // Add a simple text label to the screen
+            //
+            workflow.addFigure(new draw2d.Label("See more on http://www.openjacob.org"),350,253);
+
+
+            // Add a Label with a border
+            //
+            var label = new draw2d.Label("Label with a Border");
+            var color = new draw2d.Color(10,155,10);
+            // set the background color of the label
+            label.setBackgroundColor(color);
+            // and select a "readable" font color for the given background color
+            label.setColor(color.getIdealTextColor());
+            // add a border to the label
+            var border = new draw2d.LineBorder();
+            border.setLineWidth(4);
+            label.setBorder(border);
+            workflow.addFigure(label,80,400);
+
+
+            // Add a Oval to the paint area
+            //
+            var node4 = new draw2d.Oval();
+            node4.setDimension(100,40);
+            workflow.addFigure(node4,300,350);
+
+
+            // Add a Rectangle to the paint area
+            //
+            var rect = new draw2d.Rectangle();
+            rect.setDimension(190,20);
+            workflow.addFigure(rect,250,300);
+
+            // Add a Rectangle with lineWidth and fillColor/backgroundColor
+            //
+            var rect = new draw2d.Rectangle();
+            rect.setLineWidth(5);
+            rect.setBackgroundColor(new draw2d.Color(255,120,0));
+            rect.setDimension(190,20);
+            workflow.addFigure(rect,350,320);
+            //
+            var rect = new draw2d.Rectangle();
+            rect.setLineWidth(3);
+            rect.setBackgroundColor(new draw2d.Color(120,120,0));
+            rect.setDimension(190,120);
+            workflow.addFigure(rect,850,820);
+        </script>
+    </body>
+</html>
